@@ -501,7 +501,7 @@ document.addEventListener('keydown',function(e){
   if(e.key===' '||e.key==='Space'){e.preventDefault();inpJ()}
   if(e.key==='x'||e.key==='X'){if(st===ST.P||st===ST.PA)toggleP()}
 });
-CX.addEventListener('click',function(){inpJ()});
+document.addEventListener('click',function(){inpJ()});
 document.addEventListener('touchstart',function(e){e.preventDefault();inpJ()});
 document.getElementById('pb').addEventListener('click',function(){if(st===ST.P||st===ST.PA)toggleP()});
 document.getElementById('rb').addEventListener('click',startG);

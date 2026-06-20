@@ -312,17 +312,20 @@ function spawnOb(){
   nextOX+=w+gap;
   var ob;
   if(ch===0){
-    var h=(4+Math.floor(Math.random()*5))*bw;
+    var h=Math.floor(GY*(0.15+Math.random()*0.2)/bw)*bw;
+    h=Math.max(bw,Math.min(h,GY*0.45));
     var gh=getH(nextOX);
     var y=Math.min(gh,GY-h);
     ob={t:0,x:nextOX,y:y,w:w,h:h};
   }else if(ch===1){
     var mw=(3+Math.floor(Math.random()*3))*bw;
-    var mh=(3+Math.floor(Math.random()*2))*bw;
-    var my=Math.random()*(GY*0.5-mh)+GY*0.12;
+    var mh=Math.floor(GY*(0.1+Math.random()*0.1)/bw)*bw;
+    mh=Math.max(bw,Math.min(mh,GY*0.25));
+    var my=Math.random()*(GY*0.6-mh)+GY*0.15;
     ob={t:1,x:nextOX,y:my,w:mw,h:mh};
   }else{
-    var h=(4+Math.floor(Math.random()*5))*bw;
+    var h=Math.floor(GY*(0.15+Math.random()*0.2)/bw)*bw;
+    h=Math.max(bw,Math.min(h,GY*0.45));
     ob={t:2,x:nextOX,y:0,w:w,h:h};
   }
   obs.push(ob);

@@ -103,7 +103,7 @@ function resize() {
   CX.width = CW; CX.height = CH;
   CX.style.width = r.width+'px'; CX.style.height = r.height+'px';
   GY = Math.floor(CH*0.78);
-  BSC = Math.max(3, Math.floor(CW/600) * 3);
+  BSC = Math.max(2, Math.floor(CW/600) * 2);
   var cr = document.getElementById('cm').getBoundingClientRect();
   var co = document.getElementById('co');
   co.width = Math.floor(cr.width*dpr);
@@ -308,7 +308,7 @@ function spawnOb(){
   lastOT=ch;
   var bw=BPX*BSC;
   var w=ch===1?(3+Math.floor(Math.random()*3))*bw:(2+Math.floor(Math.random()*2))*bw;
-  var gap=Math.max(140,200-spdMul*5+(Math.random()-0.5)*100);
+  var gap=Math.max(CW*0.2,CW*0.32-spdMul*8+(Math.random()-0.5)*CW*0.04);
   nextOX+=w+gap;
   var ob;
   if(ch===0){
